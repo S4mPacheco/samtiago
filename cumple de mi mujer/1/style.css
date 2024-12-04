@@ -1,0 +1,98 @@
+.mensagens {
+  /* Fondo con imagen */
+  background-image: url(fondoconter.jpg);
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+  /* Estructura de presentación */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Posicionamiento */
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  /* Dimensión */
+  height: 100%;
+  width: 100%;
+}
+
+.mensagem {
+  /* Texto */
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+  font-size: 10vh;
+  margin: 0;
+
+  animation-name: rainbow;
+  animation-duration: 1.25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.mensagem:nth-child(1) {
+  animation-delay: 0.2s;
+  animation-duration: 1.25s;
+}
+
+.mensagem:nth-child(2) {
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+  animation-direction: reverse;
+}
+
+.mensagem:nth-child(3) {
+  animation-delay: 0.4s;
+  animation-duration: 0.81s;
+}
+
+.mensagem:nth-child(4) {
+  animation-delay: 0.5s;
+  animation-duration: 1.3s;
+}
+
+/* Animación arcoíris */
+@keyframes rainbow {
+  0% { color: #ff0000; }
+  10% { color: #ff8000; }
+  20% { color: #ffff00; }
+  30% { color: #80ff00; }
+  40% { color: #00ff00; }
+  50% { color: #00ff80; }
+  60% { color: #00ffff; }
+  70% { color: #0080ff; }
+  80% { color: #0000ff; }
+  90% { color: #8000ff; }
+  100% { color: #ff0080; }
+}
+
+.boton {
+  /* Estilo base */
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 20px;
+  border: 2px solid white; /* Borde blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  background: transparent; /* Fondo transparente */
+  margin-top: 20px;
+  cursor: pointer;
+
+  /* Animación */
+  animation-name: rainbow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  display: inline-block; /* Para centrado */
+  text-align: center; /* Centrado del texto */
+}
+
+.boton:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido al pasar el ratón */
+}

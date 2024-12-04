@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+	font-family: 'Indie Flower', cursive !important;
+  background: #FDE3A7; /*CAPE HONEY*/
+	margin: 0px;
+	padding: 0px;
+}
+
+::selection {
+	background: transparent;
+}
+
+h4 {
+	font-size: 26px;
+	line-height: 1px;
+	font-family: 'Amatic SC', cursive !important;
+}
+
+.color1{color:#9c0487}/*MOUNTAIN MEADOW*/
+.color2{color:#0c0504/*TALL POPPY*/}
+
+
+.card {
+	color: #013243; /*SHERPA BLUE*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 400px;
+	background: #e0e1dc;
+	transform-style: preserve-3d;
+	transform: translate(-50%,-50%) perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+	transition: 1s;
+}
+
+.card:hover {
+	transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.card:before {
+	content:'';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #BAC1BA;
+	transform-origin: bottom;
+	transform: skewX(-45deg);
+}
+
+.card:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -5px;
+	width: 5px;
+	height: 100%;
+	background: #92A29C;
+	transform-origin: left;
+	transform: skewY(-45deg);
+}
+
+.card .imgBox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-origin: left;
+	transition: .7s;
+}
+
+.card .bark {
+	position: absolute;
+	background: #e0e1dc;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .7s;
+}
+
+.card .imgBox img {
+	min-width: 250px;
+	max-height: 400px;
+}
+
+.card:hover .imgBox {
+	transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+	opacity: 1;
+	transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+	z-index: -1;
+	margin-top: 70px;
+}
+
+.card .details p {
+	font-size: 15px;
+	line-height: 5px;
+	transform: rotate(-10deg);
+	padding: 0 0 0 20px;
+}
+
+.card .details h4 {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.next-button {
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #1BBC9B; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.next-button:hover {
+    background-color: #C0392B; /* Color de fondo al pasar el mouse */
+}
+
+.container {
+    display: flex; /* Usar flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinear elementos verticalmente */
+}
+
+.left-images, .right-images {
+    display: flex;
+    flex-direction: column; /* Colocar imágenes en columna */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.image-box {
+    width: 150px; /* Aumentar el ancho de cada cuadro de imagen */
+    height: 200px; /* Aumentar el alto de cada cuadro de imagen */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    border: 2px solid #ccc; /* Borde alrededor de cada cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.image-box img {
+    width: 100%; /* Hacer que la imagen ocupe todo el cuadro */
+    height: 100%; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+.central-book {
+    flex: 1; /* Permitir que el libro central ocupe el espacio restante */
+    text-align: center; /* Centrar el texto */
+}
+
+audio {
+    display: block; /* Asegurar que el reproductor se comporte como un bloque */
+    margin: 20px auto; /* Centrar el reproductor horizontalmente */
+}
+
+.back-button {
+    position: absolute; /* Permite posicionarlo en cualquier parte de la página */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    padding: 10px 15px; /* Espaciado interno para que se vea mejor */
+    background-color: #1BBC9B; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
